@@ -1,9 +1,6 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-/MicroRabbit/MicroRabbit.Domain.Core/obj/Debug/netcoreapp2.1
-/MicroRabbit/MicroRabbit.Domain.Core/obj
+bin/
+obj/
 /MicroRabbit/.vs/MicroRabbit/v15
-/MicroRabbit/.vs/MicroRabbit/v15
-/MicroRabbit/MicroRabbit.Domain.Core/obj
