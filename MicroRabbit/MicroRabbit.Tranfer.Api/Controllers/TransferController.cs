@@ -8,7 +8,7 @@ namespace MicroRabbit.Tranfer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class TransferController : ControllerBase
     {
         // GET api/values
         [HttpGet]
