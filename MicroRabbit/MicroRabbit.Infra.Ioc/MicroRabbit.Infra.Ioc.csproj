@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\MicroRabbit.Banking.Application\MicroRabbit.Banking.Application.csproj" />
+    <ProjectReference Include="..\MicroRabbit.Banking.Data\MicroRabbit.Banking.Data.csproj" />
     <ProjectReference Include="..\MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj" />
     <ProjectReference Include="..\MicroRabbit.Infrastructure.Bus\MicroRabbit.Infrastructure.Bus.csproj" />
   </ItemGroup>
