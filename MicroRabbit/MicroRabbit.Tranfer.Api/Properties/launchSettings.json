@@ -4,8 +4,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:58523",
-      "sslPort": 44326
+      "applicationUrl": "http://localhost:60040",
+      "sslPort": 44346
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "WebApplication1": {
+    "MicroRabbit.Tranfer.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

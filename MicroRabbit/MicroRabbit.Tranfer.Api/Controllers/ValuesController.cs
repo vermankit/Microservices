@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication1.Controllers
+namespace MicroRabbit.Tranfer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
