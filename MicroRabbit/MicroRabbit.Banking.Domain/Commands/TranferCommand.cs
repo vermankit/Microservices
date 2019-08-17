@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MicroRabbit.Banking.Domain.Commands
+namespace MicroRabbit.Transfer.Domain.Commands
 {
     public abstract class TranferCommand : Command
     {

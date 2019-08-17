@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MicroRabbit.Transfer.Data.Migrations
 {
-    [DbContext(typeof(BankingDbContext))]
-    [Migration("20190813170611_Intial-Migration")]
-    partial class IntialMigration
+    [DbContext(typeof(TransferDbContext))]
+    [Migration("20190817075105_Initial-Migration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,19 +20,21 @@ namespace MicroRabbit.Transfer.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MicroRabbit.Banking.Domain.Models.Account", b =>
+            modelBuilder.Entity("MicroRabbit.Tranfer.Domain.Models.TransferLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<decimal>("AccountBalance");
+                    b.Property<int>("FromAccount");
 
-                    b.Property<string>("AccountType");
+                    b.Property<int>("ToAccount");
+
+                    b.Property<decimal>("TransferAmount");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("TransferLogs");
                 });
 #pragma warning restore 612, 618
         }

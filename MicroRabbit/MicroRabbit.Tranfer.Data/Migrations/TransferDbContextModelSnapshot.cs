@@ -3,16 +3,14 @@ using MicroRabbit.Transfer.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace MicroRabbit.Transfer.Data.Migrations
+namespace MicroRabbit.Tranfer.Data.Migrations
 {
-    [DbContext(typeof(BankingDbContext))]
-    [Migration("20190813170611_Intial-Migration")]
-    partial class IntialMigration
+    [DbContext(typeof(TransferDbContext))]
+    partial class TransferDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,19 +18,21 @@ namespace MicroRabbit.Transfer.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MicroRabbit.Banking.Domain.Models.Account", b =>
+            modelBuilder.Entity("MicroRabbit.Tranfer.Domain.Models.TransferLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<decimal>("AccountBalance");
+                    b.Property<int>("FromAccount");
 
-                    b.Property<string>("AccountType");
+                    b.Property<int>("ToAccount");
+
+                    b.Property<decimal>("TransferAmount");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("TransferLogs");
                 });
 #pragma warning restore 612, 618
         }

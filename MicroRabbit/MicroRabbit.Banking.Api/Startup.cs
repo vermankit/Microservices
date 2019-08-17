@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Transfer.Data.Context;
 using MicroRabbit.Infra.Ioc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace MicroRabbit.Banking.Api
+namespace MicroRabbit.Transfer.Api
 {
     public class Startup
     {

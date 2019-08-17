@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MicroRabbit.Banking.Application.Interfaces;
-using MicroRabbit.Banking.Application.Models;
-using MicroRabbit.Banking.Domain.Models;
+using MicroRabbit.Transfer.Application.Interfaces;
+using MicroRabbit.Transfer.Application.Models;
+using MicroRabbit.Transfer.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MicroRabbit.Banking.Api.Controllers
+namespace MicroRabbit.Transfer.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

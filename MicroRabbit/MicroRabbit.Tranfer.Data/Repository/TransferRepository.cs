@@ -7,16 +7,17 @@ using System.Text;
 
 namespace MicroRabbit.Transfer.Data.Repository
 {
-    public class AccountRepository : IAccountRepository
+    public class TransferRepository : ITransferRepository
     {
-        private BankingDbContext _ctx;
-        public AccountRepository(BankingDbContext ctx)
+        private readonly TransferDbContext _ctx;
+        public TransferRepository(TransferDbContext ctx)
         {
             _ctx = ctx;
         }
-        public IEnumerable<Account> GetAccounts()
+        public IEnumerable<TransferLog> GetTransferLogs()
         {
-            return _ctx.Accounts;
+            return _ctx.TransferLogs;
+
         }
     }
-}   
+}
